@@ -68,26 +68,8 @@
                     </button>
                 </form>
 
-                <!-- Modal do Carrinho -->
-                <div id="cart-modal" class="modal" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Itens do Carrinho</h5>
-                                <button type="button" class="btn-close" onclick="toggleCartModal()"></button>
-                            </div>
-                            <div class="modal-body">
-                                <ul id="cart-items" class="list-group"></ul>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" onclick="clearCart()">Esvaziar
-                                    Carrinho</button>
-                                <button type="button" class="btn btn-primary" onclick="sendOrder()">Finalizar
-                                    Pedido</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                
     </nav>
     <!-- Header-->
     <header class="bg-dark py-5">
@@ -100,6 +82,26 @@
         </div>
     </header>
     <br><br>
+    <!-- Modal do Carrinho -->
+    <div id="cart-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Itens do Carrinho</h5>
+                    <button type="button" class="btn-close" onclick="toggleCartModal()"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cart-items" class="list-group"></ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="clearCart()">Esvaziar
+                        Carrinho</button>
+                    <button type="button" class="btn btn-primary" onclick="sendOrder()">Finalizar
+                        Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div>
         <div style="position: relative; display: flex; align-items: center;">
             <!-- Círculo laranja -->
@@ -592,7 +594,7 @@
             </div>
         </div>
     </div>
-    <button class="floating-button" onclick="scrollToTop()">Ver Carrinho</button>
+    <button class="floating-button" onclick="toggleCartModal()">Ver Carrinho</button>
 
     <script>
         function scrollToTop() {
