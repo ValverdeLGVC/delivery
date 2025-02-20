@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Delivery Valverde</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/burger.png" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">Delivery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">All Products</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button id="cart-button" class="btn btn-outline-dark" type="button" onclick="toggleCartModal()">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrinho
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                    </button>
+                </form>
+
+                <!-- Modal do Carrinho -->
+                <div id="cart-modal" class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Itens do Carrinho</h5>
+                                <button type="button" class="btn-close" onclick="toggleCartModal()"></button>
+                            </div>
+                            <div class="modal-body">
+                                <ul id="cart-items" class="list-group"></ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" onclick="clearCart()">Esvaziar
+                                    Carrinho</button>
+                                <button type="button" class="btn btn-primary" onclick="sendOrder()">Finalizar
+                                    Pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <img class="perfil" src="assets/undraw_to-the-moon_w1wa.png" alt="">
+                <h1>Lanche Espacial</h1>
+            </div>
+
+        </div>
+    </header>
+    <br><br>
+    <div>
+        <div style="position: relative; display: flex; align-items: center;">
+            <!-- Círculo laranja -->
+            <div
+                style="position: absolute; width: 50%; height: 100%; background-color: rgb(255, 209, 123); border-radius: 50%; left: 0; top: 50%; transform: translateY(-50%); z-index: 0;">
+            </div>
+
+            <!-- Imagem do hambúrguer -->
+            <img src="assets/—Pngtree—hamburger_15881307.png"
+                style="width: 45%; height: auto; position: relative; z-index: 1; margin-left: 2%;" alt="Hambúrguer">
+
+            <!-- Texto ao lado da imagem -->
+            <p style="flex: 1; margin-left: 5%; font-size: 18px; line-height: 1.5; color: rgb(136, 136, 136);">
+                Os hambúrgueres defumados são uma explosão de sabor! Feitos na brasa, ganham um toque especial de
+                fumaça, deixando a carne suculenta e irresistível. Perfeitos para quem busca um hambúrguer além do
+                comum!
+            </p>
+        </div>
+
+
+    </div>
+
+
+    <br><br>
+    <!-- Section-->
+    <h1
+        style="color: rgb(16, 16, 70); text-align: center; margin-top: 3%; color: rgb(255, 209, 123);border-radius: 20px; padding: 20px; margin:0 auto; width: 30%; ">
+        Hamburgueres</h1>
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/undraw_barbecue_td8x.png" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Lanches disponíveis</h5>
+                                <!-- Product price-->
+
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-valeriya-1639557.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Hamburguer Espiral</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$20.00</span>
+                                $18.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Hamburguer Espiral', 18)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-valeriya-1639557.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Hamburguer Espacial</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$50.00</span>
+                                $25.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Hamburguer Espacial', 25)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-valeriya-1639557.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Combo Marciano</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $40.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Combo Marciano', 40)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-valeriya-1639557.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">ET Zulu</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$50.00</span>
+                                $25.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('ET  Zulu', 25)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-valeriya-1639557.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Barca Estalar</h5>
+                                <!-- Product price-->
+                                $120.00 - $280.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Barca Estelar', 25)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-valeriya-1639557.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">ETzim</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$20.00</span>
+                                $18.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('ETzim', 18)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-valeriya-1639557.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Combo Predador</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $40.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Combo Predador', 40)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr style="margin: 0 auto; width: 80%; height: 5px; border-radius: 99px; background-color: rgb(70, 58, 16);">
+    <br><br>
+    <div style="position: relative; display: flex; align-items: center;">
+        <!-- Círculo laranja -->
+        <div
+            style="position: absolute; width: 50%; height: 100%; background-color: rgb(255, 209, 125); border-radius: 50%; left: 0; top: 50%; transform: translateY(-50%); z-index: 0;">
+        </div>
+
+        <!-- Imagem do hambúrguer -->
+        <img src="assets/—Pngtree—melted cheese pizza slice_15347906.png"
+            style="width: 45%; height: auto; position: relative; z-index: 1; margin-left: 2%;" alt="Hambúrguer">
+
+        <!-- Texto ao lado da imagem -->
+        <p style="flex: 1; margin-left: 5%; font-size: 18px; line-height: 1.5; color: rgb(131, 131, 131);">
+            As pizzas são uma verdadeira paixão! Feitas com uma massa leve e crocante, cobertas com molho de tomate bem
+            temperado e ingredientes frescos, elas conquistam qualquer paladar. Seja a clássica margherita, uma explosão
+            de sabores com pepperoni ou uma combinação especial de queijos derretidos, cada fatia é um pedaço de
+            felicidade. Perfeitas para qualquer ocasião, as pizzas unem amigos e família em momentos deliciosos!
+        </p>
+    </div>
+    <br><br>
+    <h1
+        style="color: rgb(16, 16, 70); text-align: center; margin-top: 3%; color:rgb(255, 209, 124); border-radius: 20px; padding: 20px; margin:0 auto; width: 30%;">
+        Pizzas</h1>
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/undraw_barbecue_td8x.png" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Lanches disponíveis</h5>
+                                <!-- Product price-->
+
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-muffin-1653877.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Pizza Espacial</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$20.00</span>
+                                $18.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Pizza Espacial', 18)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-muffin-1653877.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Pizzana</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$50.00</span>
+                                $25.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Pizzana', 25)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-muffin-1653877.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Pizza Voadora</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $40.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Pizza Voadora', 40)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-muffin-1653877.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Pizza Estrela</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$50.00</span>
+                                $25.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Pizza Estrela', 25)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-muffin-1653877.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Barca de mini Pizza</h5>
+                                <!-- Product price-->
+                                $120.00 - $280.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Barca de mini Pizza', 280)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-muffin-1653877.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Pizzinha</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$20.00</span>
+                                $18.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Pizzinha', 20)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/pexels-muffin-1653877.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Pizzaiola</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $40.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                    onclick="addToCart('Pizzaiola', 40)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-sobre">
+        <div class="foto-sobre">
+            <div class="comentario-sobre">
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Todos os direitos reservados 2025</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+        let cart = [];
+        const cartButton = document.getElementById('cart-button');
+        const cartCount = document.getElementById('cart-count');
+        const cartItems = document.getElementById('cart-items');
+        const cartModal = document.getElementById('cart-modal');
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            updateCartCount();
+            displayCartItems();
+        }
+
+        function updateCartCount() {
+            cartCount.textContent = cart.length;
+        }
+
+        function displayCartItems() {
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+                li.innerHTML = `${item.item} - R$ ${item.price.toFixed(2)} <button class='btn btn-sm btn-danger' onclick='removeFromCart(${index})'>X</button>`;
+                cartItems.appendChild(li);
+            });
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartCount();
+            displayCartItems();
+        }
+
+        function toggleCartModal() {
+            cartModal.classList.toggle('show');
+            cartModal.style.display = cartModal.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCartCount();
+            displayCartItems();
+            toggleCartModal();
+        }
+
+        function sendOrder() {
+            if (cart.length === 0) {
+                alert('O carrinho está vazio!');
+                return;
+            }
+
+            const orderDetails = cart.map(item => `${item.item} - R$ ${item.price.toFixed(2)}`).join('%0A');
+            const phoneNumber = '5564992142391';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=Pedido:%0A${orderDetails}`;
+
+            window.location.href = whatsappUrl;
+
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+    const cartButton = document.getElementById("cart-button");
+    const cartCount = document.getElementById("cart-count");
+    
+    if (!cartCount) {
+        console.error("Elemento #cart-count não encontrado!");
+        return;
+    }
+
+    const floatingCart = document.createElement("button");
+    floatingCart.id = "floating-cart";
+    floatingCart.classList.add("btn", "btn-dark", "floating-cart-btn");
+    floatingCart.style.position = "fixed";
+    floatingCart.style.bottom = "20px";
+    floatingCart.style.right = "20px";
+    floatingCart.style.display = "none";
+    floatingCart.style.zIndex = "1000";
+    floatingCart.innerHTML = `<i class="bi-cart-fill me-1"></i> Carrinho <span class="badge bg-light text-dark ms-1 rounded-pill" id="floating-cart-count">0</span>`;
+    document.body.appendChild(floatingCart);
+
+    const floatingCartCount = document.getElementById("floating-cart-count");
+
+    function updateFloatingCartCount() {
+        floatingCartCount.textContent = cartCount.textContent;
+    }
+
+    window.addEventListener("scroll", function () {
+        floatingCart.style.display = window.scrollY > 100 ? "block" : "none";
+    });
+
+    floatingCart.addEventListener("click", function () {
+        toggleCartModal();
+    });
+
+    const observer = new MutationObserver(updateFloatingCartCount);
+    observer.observe(cartCount, { childList: true, subtree: true });
+
+    // Animação ao rolar a página
+    const animatedElements = document.querySelectorAll(".animate-on-scroll");
+    const observerScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    animatedElements.forEach(element => {
+        observerScroll.observe(element);
+    });
+
+    // Atualizar contador ao carregar a página
+    updateFloatingCartCount();
+});
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
