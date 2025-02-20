@@ -64,18 +64,19 @@
                     <button id="cart-button" class="btn btn-outline-dark" type="button" onclick="toggleCartModal()">
                         <i class="bi-cart-fill me-1"></i>
                         Carrinho
-                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                        
                     </button>
                 </form>
 
-                
-                
+
+
     </nav>
     <!-- Header-->
     <header class="bg-dark py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
-                <img class="perfil" src="assets/Imagem do WhatsApp de 2025-02-19 à(s) 23.42.27_79ea2140.jpg" style="border-radius:999999px;" alt="">
+                <img class="perfil" src="assets/Imagem do WhatsApp de 2025-02-19 à(s) 23.42.27_79ea2140.jpg"
+                    style="border-radius:999999px;" alt="">
 
             </div>
 
@@ -105,7 +106,7 @@
     <div>
         <div style="position: relative; display: flex; align-items: center;">
             <!-- Círculo laranja -->
-            
+
 
             <!-- Imagem do hambúrguer -->
             <img src="assets/—Pngtree—hamburger_15881307.png"
@@ -589,12 +590,19 @@
     </section>
     <div class="container-sobre">
         <div class="foto-sobre">
-            <div class="comentario-sobre" >
+            <div class="comentario-sobre">
 
             </div>
         </div>
     </div>
-    <button class="floating-button" onclick="toggleCartModal()">Ver Carrinho</button>
+    <form class="d-flex">
+        <button id="cart-button" class="floating-button" type="button" onclick="toggleCartModal()">
+            <i class="bi-cart-fill me-1"></i>
+    
+            <span id="cart-count">0</span>
+        </button>
+    </form>
+    
 
     <script>
         function scrollToTop() {
