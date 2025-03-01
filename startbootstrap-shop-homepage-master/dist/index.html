@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="assets/burger.png" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
@@ -33,9 +34,45 @@
     .floating-button:hover {
         background-color: #e65c00;
     }
+    
+
+    .loader-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .loader {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #ff8000;
+        text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff4000;
+        animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff4000;
+        }
+
+        to {
+            text-shadow: 0 0 10px #ff4000, 0 0 20px #ff8000, 0 0 30px #ff4000;
+        }
+    }
 </style>
 
 <body>
+    <div class="loader-container" id="loader">
+        <div class="loader">Carregando...</div>
+    </div>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
@@ -45,26 +82,15 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
+                    
                 </ul>
                 <form class="d-flex">
                     <button id="cart-button" class="btn btn-outline-dark" type="button" onclick="toggleCartModal()">
                         <i class="bi-cart-fill me-1"></i>
                         Carrinho
-                        
+
                     </button>
                 </form>
 
@@ -75,7 +101,7 @@
     <header class="bg-dark py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
-                <img class="perfil" src="assets/Imagem do WhatsApp de 2025-02-19 à(s) 23.42.27_79ea2140.jpg"
+                <img class="perfil" src="assets/Imagem do WhatsApp de 2025-03-01 à(s) 10.50.10_c74f5bc0.jpg"
                     style="border-radius:999999px;" alt="">
 
             </div>
@@ -125,7 +151,7 @@
     <br><br>
     <!-- Section-->
     <h1
-        style="color: rgb(16, 16, 70); text-align: center; margin-top: 3%; color: rgb(255, 209, 123);border-radius: 20px; padding: 20px; margin:0 auto; width: 30%; ">
+        style="color: rgb(16, 16, 70); text-align: center; margin-top: 3%; color: rgb(255, 185, 56);border-radius: 20px; padding: 20px; margin:0 auto; width: 30%; ">
         Hamburgueres</h1>
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
@@ -145,7 +171,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Subir ao menu</a>
                             </div>
                         </div>
                     </div>
@@ -178,7 +204,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Hamburguer Espiral', 18)">Add to cart</button>
+                                    onclick="addToCart('Hamburguer Espiral', 18)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -203,7 +229,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Hamburguer Espacial', 25)">Add to cart</button>
+                                    onclick="addToCart('Hamburguer Espacial', 25)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -232,7 +258,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Combo Marciano', 40)">Add to cart</button>
+                                    onclick="addToCart('Combo Marciano', 40)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -257,7 +283,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('ET  Zulu', 25)">Add to cart</button>
+                                    onclick="addToCart('ET  Zulu', 25)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -278,7 +304,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Barca Estelar', 25)">Add to cart</button>
+                                    onclick="addToCart('Barca Estelar', 25)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -311,7 +337,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('ETzim', 18)">Add to cart</button>
+                                    onclick="addToCart('ETzim', 18)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -340,7 +366,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Combo Predador', 40)">Add to cart</button>
+                                    onclick="addToCart('Combo Predador', 40)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -365,7 +391,7 @@
     </div>
     <br><br>
     <h1
-        style="color: rgb(16, 16, 70); text-align: center; margin-top: 3%; color:rgb(255, 209, 124); border-radius: 20px; padding: 20px; margin:0 auto; width: 30%;">
+        style="color: rgb(16, 16, 70); text-align: center; margin-top: 3%; color:rgb(255, 185, 56); border-radius: 20px; padding: 20px; margin:0 auto; width: 30%;">
         Pizzas</h1>
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
@@ -385,7 +411,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Subir ao menu</a>
                             </div>
                         </div>
                     </div>
@@ -418,7 +444,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Pizza Espacial', 18)">Add to cart</button>
+                                    onclick="addToCart('Pizza Espacial', 18)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -443,7 +469,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Pizzana', 25)">Add to cart</button>
+                                    onclick="addToCart('Pizzana', 25)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -472,7 +498,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Pizza Voadora', 40)">Add to cart</button>
+                                    onclick="addToCart('Pizza Voadora', 40)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -497,7 +523,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Pizza Estrela', 25)">Add to cart</button>
+                                    onclick="addToCart('Pizza Estrela', 25)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -518,7 +544,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Barca de mini Pizza', 280)">Add to cart</button>
+                                    onclick="addToCart('Barca de mini Pizza', 280)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -551,7 +577,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Pizzinha', 20)">Add to cart</button>
+                                    onclick="addToCart('Pizzinha', 20)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -580,7 +606,7 @@
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><button class="btn btn-outline-dark mt-auto"
-                                    onclick="addToCart('Pizzaiola', 40)">Add to cart</button>
+                                    onclick="addToCart('Pizzaiola', 40)">Adicionar ao carrinho</button>
                             </div>
                         </div>
                     </div>
@@ -598,11 +624,12 @@
     <form class="d-flex">
         <button id="cart-button" class="floating-button" type="button" onclick="toggleCartModal()">
             <i class="bi-cart-fill me-1"></i>
-    
+
             <span id="cart-count">0</span>
         </button>
     </form>
-    
+
+
 
     <script>
         function scrollToTop() {
@@ -682,6 +709,14 @@
         }
 
 
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+                document.body.style.overflow = "auto";
+            }, 4000);
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
